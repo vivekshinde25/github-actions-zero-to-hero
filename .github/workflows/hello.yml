@@ -2,13 +2,15 @@
 name: Hello 
 
 # runs on an automatic trigger, whenever change is pushed to branch (deployment)
-on: 
+on:
   workflow_dispatch:
   # push:
   #   branches: [main]
-    
   #   paths:
   #     - '**.html'
+
+  pull_request:
+    branches: [main]
 
 # these are jobs inside the workflow
 jobs:
